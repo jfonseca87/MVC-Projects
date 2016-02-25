@@ -1,0 +1,6 @@
+En este repositorio encontrara proyectos a nivel academico que realice para mejorar mis habilidades en 
+el manejo de aplicaciones web con ASP.NET utilizando el patron de diseño MVC en su versión 4, Entity 
+Framework 6.0 y adicionalmente Bootstrap, JQUERY y JSON para los temas de Front End y AJAX
+
+Muchos de estos proyectos utilizan bases de datos en los cuales en cada carpeta tendra su archivo script
+para ejecutarlo y crear la base en el motor de base de datos local.
