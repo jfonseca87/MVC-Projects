@@ -4,3 +4,6 @@ Framework 6.0 y adicionalmente Bootstrap, JQUERY y JSON para los temas de Front 
 
 Muchos de estos proyectos utilizan bases de datos en los cuales en cada carpeta tendra su archivo script
 para ejecutarlo y crear la base en el motor de base de datos local.
+
+Es necesario para que los proyectos que se conectan a una base de datos funcionen que modifique la cadena
+de conexión de cada proyecto.
