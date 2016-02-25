@@ -6,4 +6,4 @@ Muchos de estos proyectos utilizan bases de datos en los cuales en cada carpeta 
 para ejecutarlo y crear la base en el motor de base de datos local.
 
 Es necesario para que los proyectos que se conectan a una base de datos funcionen que modifique la cadena
-de conexión de cada proyecto.
+de conexión de cada proyecto esta cadena se encuentra en el archivo Web.Config
