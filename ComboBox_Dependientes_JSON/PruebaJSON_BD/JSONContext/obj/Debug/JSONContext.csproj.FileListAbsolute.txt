@@ -1,0 +1,10 @@
+d:\jlfr\mis documentos ( local )\visual studio 2013\Projects\PruebaJSON\JSONContext\bin\Debug\JSONContext.dll.config
+d:\jlfr\mis documentos ( local )\visual studio 2013\Projects\PruebaJSON\JSONContext\bin\Debug\JSONContext.dll
+d:\jlfr\mis documentos ( local )\visual studio 2013\Projects\PruebaJSON\JSONContext\bin\Debug\JSONContext.pdb
+d:\jlfr\mis documentos ( local )\visual studio 2013\Projects\PruebaJSON\JSONContext\bin\Debug\EntityFramework.dll
+d:\jlfr\mis documentos ( local )\visual studio 2013\Projects\PruebaJSON\JSONContext\bin\Debug\EntityFramework.SqlServer.dll
+d:\jlfr\mis documentos ( local )\visual studio 2013\Projects\PruebaJSON\JSONContext\bin\Debug\EntityFramework.xml
+d:\jlfr\mis documentos ( local )\visual studio 2013\Projects\PruebaJSON\JSONContext\bin\Debug\EntityFramework.SqlServer.xml
+d:\jlfr\mis documentos ( local )\visual studio 2013\Projects\PruebaJSON\JSONContext\obj\Debug\JSONContext.csprojResolveAssemblyReference.cache
+d:\jlfr\mis documentos ( local )\visual studio 2013\Projects\PruebaJSON\JSONContext\obj\Debug\JSONContext.dll
+d:\jlfr\mis documentos ( local )\visual studio 2013\Projects\PruebaJSON\JSONContext\obj\Debug\JSONContext.pdb

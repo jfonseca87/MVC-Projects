@@ -1,0 +1,23 @@
+﻿@model PruebaJSON.Models.Pais
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        Continente:
+        @Html.DropDownList("dpContinente", "Seleccione...") <br /><br />
+        Pais:
+        @Html.DropDownList("dpPais", "Seleccione...")
+    </div>
+    <script src="~/Assets/js/jquery.js"></script>
+    <script src="~/Assets/js/logic.js"></script>
+</body>
+</html>

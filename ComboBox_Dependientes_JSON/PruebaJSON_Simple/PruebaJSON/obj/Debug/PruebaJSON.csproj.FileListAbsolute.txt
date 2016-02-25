@@ -1,0 +1,74 @@
+d:\jlfr\mis documentos ( local )\visual studio 2013\Projects\PruebaJSON\PruebaJSON\bin\PruebaJSON.dll.config
+d:\jlfr\mis documentos ( local )\visual studio 2013\Projects\PruebaJSON\PruebaJSON\bin\PruebaJSON.dll
+d:\jlfr\mis documentos ( local )\visual studio 2013\Projects\PruebaJSON\PruebaJSON\bin\PruebaJSON.pdb
+d:\jlfr\mis documentos ( local )\visual studio 2013\Projects\PruebaJSON\PruebaJSON\bin\Microsoft.Web.Infrastructure.dll
+d:\jlfr\mis documentos ( local )\visual studio 2013\Projects\PruebaJSON\PruebaJSON\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+d:\jlfr\mis documentos ( local )\visual studio 2013\Projects\PruebaJSON\PruebaJSON\bin\Newtonsoft.Json.dll
+d:\jlfr\mis documentos ( local )\visual studio 2013\Projects\PruebaJSON\PruebaJSON\bin\System.Net.Http.Formatting.dll
+d:\jlfr\mis documentos ( local )\visual studio 2013\Projects\PruebaJSON\PruebaJSON\bin\System.Web.Helpers.dll
+d:\jlfr\mis documentos ( local )\visual studio 2013\Projects\PruebaJSON\PruebaJSON\bin\System.Web.Http.dll
+d:\jlfr\mis documentos ( local )\visual studio 2013\Projects\PruebaJSON\PruebaJSON\bin\System.Web.Http.WebHost.dll
+d:\jlfr\mis documentos ( local )\visual studio 2013\Projects\PruebaJSON\PruebaJSON\bin\System.Web.Mvc.dll
+d:\jlfr\mis documentos ( local )\visual studio 2013\Projects\PruebaJSON\PruebaJSON\bin\System.Web.Razor.dll
+d:\jlfr\mis documentos ( local )\visual studio 2013\Projects\PruebaJSON\PruebaJSON\bin\System.Web.WebPages.Deployment.dll
+d:\jlfr\mis documentos ( local )\visual studio 2013\Projects\PruebaJSON\PruebaJSON\bin\System.Web.WebPages.dll
+d:\jlfr\mis documentos ( local )\visual studio 2013\Projects\PruebaJSON\PruebaJSON\bin\System.Web.WebPages.Razor.dll
+d:\jlfr\mis documentos ( local )\visual studio 2013\Projects\PruebaJSON\PruebaJSON\bin\Newtonsoft.Json.xml
+d:\jlfr\mis documentos ( local )\visual studio 2013\Projects\PruebaJSON\PruebaJSON\bin\System.Net.Http.Formatting.xml
+d:\jlfr\mis documentos ( local )\visual studio 2013\Projects\PruebaJSON\PruebaJSON\bin\System.Web.Helpers.xml
+d:\jlfr\mis documentos ( local )\visual studio 2013\Projects\PruebaJSON\PruebaJSON\bin\System.Web.Http.xml
+d:\jlfr\mis documentos ( local )\visual studio 2013\Projects\PruebaJSON\PruebaJSON\bin\System.Web.Http.WebHost.xml
+d:\jlfr\mis documentos ( local )\visual studio 2013\Projects\PruebaJSON\PruebaJSON\bin\System.Web.Mvc.xml
+d:\jlfr\mis documentos ( local )\visual studio 2013\Projects\PruebaJSON\PruebaJSON\bin\System.Web.Razor.xml
+d:\jlfr\mis documentos ( local )\visual studio 2013\Projects\PruebaJSON\PruebaJSON\bin\System.Web.WebPages.xml
+d:\jlfr\mis documentos ( local )\visual studio 2013\Projects\PruebaJSON\PruebaJSON\bin\System.Web.WebPages.Deployment.xml
+d:\jlfr\mis documentos ( local )\visual studio 2013\Projects\PruebaJSON\PruebaJSON\bin\System.Web.WebPages.Razor.xml
+d:\jlfr\mis documentos ( local )\visual studio 2013\Projects\PruebaJSON\PruebaJSON\bin\es\System.Net.Http.Formatting.resources.dll
+d:\jlfr\mis documentos ( local )\visual studio 2013\Projects\PruebaJSON\PruebaJSON\bin\es\System.Web.Helpers.resources.dll
+d:\jlfr\mis documentos ( local )\visual studio 2013\Projects\PruebaJSON\PruebaJSON\bin\es\System.Web.Http.resources.dll
+d:\jlfr\mis documentos ( local )\visual studio 2013\Projects\PruebaJSON\PruebaJSON\bin\es\System.Web.Http.WebHost.resources.dll
+d:\jlfr\mis documentos ( local )\visual studio 2013\Projects\PruebaJSON\PruebaJSON\bin\es\System.Web.Mvc.resources.dll
+d:\jlfr\mis documentos ( local )\visual studio 2013\Projects\PruebaJSON\PruebaJSON\bin\es\System.Web.Razor.resources.dll
+d:\jlfr\mis documentos ( local )\visual studio 2013\Projects\PruebaJSON\PruebaJSON\bin\es\System.Web.WebPages.resources.dll
+d:\jlfr\mis documentos ( local )\visual studio 2013\Projects\PruebaJSON\PruebaJSON\bin\es\System.Web.WebPages.Deployment.resources.dll
+d:\jlfr\mis documentos ( local )\visual studio 2013\Projects\PruebaJSON\PruebaJSON\bin\es\System.Web.WebPages.Razor.resources.dll
+d:\jlfr\mis documentos ( local )\visual studio 2013\Projects\PruebaJSON\PruebaJSON\obj\Debug\PruebaJSON.csprojResolveAssemblyReference.cache
+d:\jlfr\mis documentos ( local )\visual studio 2013\Projects\PruebaJSON\PruebaJSON\obj\Debug\PruebaJSON.dll
+d:\jlfr\mis documentos ( local )\visual studio 2013\Projects\PruebaJSON\PruebaJSON\obj\Debug\PruebaJSON.pdb
+L:\PruebaJSON\PruebaJSON\bin\PruebaJSON.dll.config
+L:\PruebaJSON\PruebaJSON\bin\PruebaJSON.dll
+L:\PruebaJSON\PruebaJSON\bin\PruebaJSON.pdb
+L:\PruebaJSON\PruebaJSON\bin\Microsoft.Web.Infrastructure.dll
+L:\PruebaJSON\PruebaJSON\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+L:\PruebaJSON\PruebaJSON\bin\Newtonsoft.Json.dll
+L:\PruebaJSON\PruebaJSON\bin\System.Net.Http.Formatting.dll
+L:\PruebaJSON\PruebaJSON\bin\System.Web.Helpers.dll
+L:\PruebaJSON\PruebaJSON\bin\System.Web.Http.dll
+L:\PruebaJSON\PruebaJSON\bin\System.Web.Http.WebHost.dll
+L:\PruebaJSON\PruebaJSON\bin\System.Web.Mvc.dll
+L:\PruebaJSON\PruebaJSON\bin\System.Web.Razor.dll
+L:\PruebaJSON\PruebaJSON\bin\System.Web.WebPages.Deployment.dll
+L:\PruebaJSON\PruebaJSON\bin\System.Web.WebPages.dll
+L:\PruebaJSON\PruebaJSON\bin\System.Web.WebPages.Razor.dll
+L:\PruebaJSON\PruebaJSON\bin\Newtonsoft.Json.xml
+L:\PruebaJSON\PruebaJSON\bin\System.Net.Http.Formatting.xml
+L:\PruebaJSON\PruebaJSON\bin\System.Web.Helpers.xml
+L:\PruebaJSON\PruebaJSON\bin\System.Web.Http.xml
+L:\PruebaJSON\PruebaJSON\bin\System.Web.Http.WebHost.xml
+L:\PruebaJSON\PruebaJSON\bin\System.Web.Mvc.xml
+L:\PruebaJSON\PruebaJSON\bin\System.Web.Razor.xml
+L:\PruebaJSON\PruebaJSON\bin\System.Web.WebPages.xml
+L:\PruebaJSON\PruebaJSON\bin\System.Web.WebPages.Deployment.xml
+L:\PruebaJSON\PruebaJSON\bin\System.Web.WebPages.Razor.xml
+L:\PruebaJSON\PruebaJSON\bin\es\System.Net.Http.Formatting.resources.dll
+L:\PruebaJSON\PruebaJSON\bin\es\System.Web.Helpers.resources.dll
+L:\PruebaJSON\PruebaJSON\bin\es\System.Web.Http.resources.dll
+L:\PruebaJSON\PruebaJSON\bin\es\System.Web.Http.WebHost.resources.dll
+L:\PruebaJSON\PruebaJSON\bin\es\System.Web.Mvc.resources.dll
+L:\PruebaJSON\PruebaJSON\bin\es\System.Web.Razor.resources.dll
+L:\PruebaJSON\PruebaJSON\bin\es\System.Web.WebPages.resources.dll
+L:\PruebaJSON\PruebaJSON\bin\es\System.Web.WebPages.Deployment.resources.dll
+L:\PruebaJSON\PruebaJSON\bin\es\System.Web.WebPages.Razor.resources.dll
+L:\PruebaJSON\PruebaJSON\obj\Debug\PruebaJSON.csprojResolveAssemblyReference.cache
+L:\PruebaJSON\PruebaJSON\obj\Debug\PruebaJSON.dll
+L:\PruebaJSON\PruebaJSON\obj\Debug\PruebaJSON.pdb
