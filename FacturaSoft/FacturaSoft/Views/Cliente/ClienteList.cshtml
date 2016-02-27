@@ -1,0 +1,76 @@
+﻿@model FacturaSoft.Helper.PagedData<Model.Cliente>
+
+<link href="~/Assets/paginacion.css" rel="stylesheet" />
+
+<table class="ui selectable table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Cliente</th>
+            <th>Documento No.</th>
+            <th class="right aligned"> </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Data)
+        {
+            <tr>
+                <td> @Html.DisplayFor(x => item.Id_Cliente) </td>
+                <td> @Html.DisplayFor(x => item.nom_Cliente) </td>
+                <td> @Html.DisplayFor(x => item.Doc_Cliente) </td>
+                <td class="right aligned">
+                    <button class="ui yellow button" data-id="@item.Id_Cliente">
+                        <i class="write icon"></i> &nbsp; Editar
+                    </button> &nbsp;
+                    <button class="ui red button" data-id="@item.Id_Cliente">
+                        <i class="remove circle icon"></i> &nbsp; Borrar
+                    </button>
+                </td>
+            </tr>
+        }
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="4" align="center">
+                <ul class="pagination">
+                    @for (int i = 1; i <= Model.NumberOfPages; i++)
+                    {
+                        if (i == Model.CurrentPage)
+                        {
+                            <li class="active">
+                                <a class="page-number" href="javascript:void();">@i</a>
+                            </li>
+                        }
+                        else
+                        {
+                            <li>
+                                <a class="page-number" href="javascript:void();">@i</a>
+                            </li>    
+                        }
+                    }
+                </ul>
+            </td>
+        </tr>
+    </tfoot>
+</table>
+
+
+<script src="~/Assets/jquery.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".page-number").click(function () {
+            var page = parseInt($(this).html());
+
+            alert(page);
+
+            $.ajax({
+                url: '@Url.Action("ClienteList")',
+                data: { "id": page },
+                success: function (data) {
+                    $("#registros").html(data);
+                }
+            });
+
+        });
+    });
+</script>

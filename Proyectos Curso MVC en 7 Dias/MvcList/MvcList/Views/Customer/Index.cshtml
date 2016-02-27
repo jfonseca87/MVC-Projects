@@ -1,0 +1,39 @@
+﻿@model IEnumerable<MvcList.Models.Customer>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        <h1> @ViewBag.Mensaje </h1>
+        <br /><br />
+        @Html.ActionLink("Crea nuevo Cliente", "NuevoCliente")
+        <table>
+            <tr>
+                <th>Código</th>
+                <th>Nombre</th>
+                <th>Monto</th>
+            </tr>
+            @if(Model != null)
+            {
+                foreach (var cliente in Model)
+                {
+                    <tr>
+                        <td>@cliente.Code</td>
+                        <td>@cliente.Name</td>
+                        <td>@cliente.Amount</td>
+                    </tr>
+                }
+            }
+        </table>
+    </div>
+</body>
+</html>

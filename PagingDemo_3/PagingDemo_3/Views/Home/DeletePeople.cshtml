@@ -1,0 +1,27 @@
+﻿@model PagingDemo_3.Models.Person
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>DeletePeople</title>
+</head>
+<body>
+    <div>
+        @{Html.BeginForm("DeletePeople", "Home", FormMethod.Post);}
+            @Html.HiddenFor(p => p.PersonId)
+            <h4> Are you sure to delete the resgister <b> @Model.Forename @Model.Surname </b> ? </h4>
+            
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary">Delete</button>
+            </div>
+        @{Html.EndForm();}
+    </div>
+</body>
+</html>

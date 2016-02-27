@@ -1,0 +1,28 @@
+﻿@model MvcList.Models.Customer
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>NuevoCliente</title>
+</head>
+<body>
+    <div>
+        @{ Html.BeginForm("Index", "Customer");}
+
+        Código: @Html.TextBoxFor(c => c.Code) 
+        @Html.ValidationMessageFor(c => c.Code, "*") <br />
+        Nombre: @Html.TextBoxFor(c => c.Name) <br />
+        Monto: @Html.TextBoxFor(c => c.Amount) <br />
+
+        <input type="submit" name="btnEnviar" value="Enviar" />
+
+        @{Html.EndForm();}
+    </div>
+</body>
+</html>

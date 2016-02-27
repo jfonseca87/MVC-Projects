@@ -1,0 +1,26 @@
+﻿@model MVC_Tercer_Dia_Lab2b.Models.Customer
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <script src="~/Scripts/jquery-1.4.1.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        @using(Html.BeginForm("MuestraCustomer", "Home", FormMethod.Post))
+        {
+            @Html.EditorForModel();
+            @Html.ValidationSummary();
+            <input type="submit" value="Enviar" />
+        }
+    </div>
+</body>
+</html>

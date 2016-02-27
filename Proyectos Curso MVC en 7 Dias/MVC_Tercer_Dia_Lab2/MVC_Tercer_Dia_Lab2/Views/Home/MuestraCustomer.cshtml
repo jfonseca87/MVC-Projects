@@ -1,0 +1,30 @@
+﻿@model MVC_Tercer_Dia_Lab2.Models.Customer
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>MuestraCustomer</title>
+</head>
+<body>
+    <div>
+        Codigo: @Model.Code <br />
+        Nombre: @Model.Name <br />
+        
+        @if( @Model.Amount > 1000)
+        {
+            <p> Es un cliente VIP </p>
+        }
+        else
+        {
+            <p> Es un cliente Normal </p>
+        }
+        
+    </div>
+</body>
+</html>

@@ -1,0 +1,110 @@
+﻿@model Model.Alumno
+
+@{
+    ViewBag.Title = (Model.Id_Alumno > 0 ? Model.Nombre_Alumno + " " + Model.Apellido_Alumno: "Nuevo Registro");
+    List<Model.Curso> cursos = ViewBag.Cursos;
+}
+
+<ol class="breadcrumb">
+    <li><a href="~/">Alumnos</a></li>
+    <li class="active">@(Model.Id_Alumno > 0 ? Model.Nombre_Alumno + " " + Model.Apellido_Alumno : "Nuevo Registro")</li>
+</ol>
+
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li role="presentation" class="active"><a href="#Informacion" aria-controls="home" role="tab" data-toggle="tab">Información</a></li>
+
+        @if (Model.Id_Alumno > 0)
+        {
+            <li role="presentation"><a href="#Adjuntos" aria-controls="profile" role="tab" data-toggle="tab">Adjuntar Documentos</a></li>
+        }
+    </ul>
+
+    <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="Informacion">
+            @using (Html.BeginForm("Guardar", "Home", FormMethod.Post, new { id = "frm-alumno" }))
+            {
+                @Html.HiddenFor(x => x.Id_Alumno)
+                <div class="panel panel-danger">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Información Personal</h3>
+                    </div>
+                    <div class="panel-body">
+                        <dl>
+                            <dt>Nombres:</dt>
+                            <dd>@Html.TextBoxFor(x => Model.Nombre_Alumno, new { @class = "form-control" })</dd>
+                            <dd>@Html.ValidationMessageFor(x => Model.Nombre_Alumno, null, new { @class = "label label-danger" })</dd>
+                            <dt>Apellidos:</dt>
+                            <dd>@Html.TextBoxFor(x => Model.Apellido_Alumno, new { @class = "form-control" })</dd>
+                            <dd>@Html.ValidationMessageFor(x => Model.Apellido_Alumno, null, new { @class = "label label-danger" })</dd>
+                        </dl>
+                    </div>
+                </div>
+
+                <div class="panel panel-danger">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">@(Model.Id_Alumno > 0 ? "Asignaturas seleccionadas" : "Asignaturas disponibles")</h3>
+                    </div>
+                    <div class="panel-body">
+                        <ul class="list-group">
+                            @foreach (var c in cursos)
+                            {
+                                var tomado = false;
+                                foreach (var item in Model.Cursos)
+                                {
+
+                                    if (item.Id_Curso == c.Id_Curso)
+                                    {
+                                        tomado = true;
+                                        break;
+                                    }
+                                }
+                                <li class="list-group-item">
+                                    <label>
+                                        <input type="checkbox" @(tomado ? "checked" : "") name="CursosAc" value="@c.Id_Curso" />
+                                        @c.Nombre_Curso
+                                    </label>
+                                </li>
+                            }
+                        </ul>
+                        @Html.ValidationMessage("Cursos", new { @class = "label label-danger", id = "Cursos-validacion" })
+                    </div>
+                </div>
+                <div class="text-right">
+                    <button type="submit" class="btn btn-danger">@(Model.Id_Alumno > 0 ? "Guardar" : "Crear Registro")</button>
+                </div>
+            }
+        </div>
+        
+        @if (Model.Id_Alumno > 0)
+        {
+            <div role="tabpanel" class="tab-pane" id="Adjuntos">
+                <div class="panel panel-danger">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Adjuntos</h3>
+                    </div>
+                    <div class="panel-body">
+                        @using (Html.BeginForm("Adjuntar", "Home", FormMethod.Post, new { id = "frm-adjuntar", enctype = "multipart/form-data" }))
+                        {
+                            @Html.HiddenFor(x => Model.Id_Alumno);
+                            <div class="row">
+                                <div class="col-xs-10">
+                                    <div class="form-group">
+                                        <input type="file" name="file" />
+                                    </div>
+                                </div>
+                                <div class="col-xs-2">
+                                    <button type="submit" class="btn btn-primary btn-block">Adjuntar</button>
+                                </div>
+                                <div id="archivos-cargados"></div>
+                            </div>
+                            @Html.ValidationMessage("File", new { @class = "label label-danger", id = "Cursos-validacion" })
+                        }
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+

@@ -1,0 +1,13 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/_LayoutProject.cshtml";
+}
+
+<h2>Index</h2>
+
+<div align="center">
+    @Html.ActionLink("Student", "Index", "Student", null, new { @class = "btn btn-danger" })
+    @Html.ActionLink("Estudiante", "Index", "Estudiante", null, new { @class = "btn btn-danger" })
+    @Html.ActionLink("Profesor - Materia", "Index", "Profesor", null, new { @class = "btn btn-danger" })
+</div>
+

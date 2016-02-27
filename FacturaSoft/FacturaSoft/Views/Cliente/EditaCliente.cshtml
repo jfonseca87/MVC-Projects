@@ -1,0 +1,39 @@
+﻿@model Model.Cliente
+
+@{
+    ViewBag.Title = "Edita Cliente";
+    Layout = null;
+}
+
+
+<link href="~/Assets/semantic.min.css" rel="stylesheet" />
+
+<div class="header">
+    <h2> Editar Cliente </h2>
+</div>
+<div class="content">
+    @using (Html.BeginForm("EditaCliente", "Cliente", FormMethod.Post, new { @id = "EdCliForm" }))
+    {
+        @Html.HiddenFor(x => x.Id_Cliente)
+        <div id="EdCliForm" class="ui form">
+            <div class="field">
+                <label>Nombre</label>
+                @Html.TextBoxFor(x => x.nom_Cliente, new { @placeholder = "Nombre Cliente" })
+            </div>
+            <div class="field">
+                <label>Documento</label>
+                @Html.TextBoxFor(x => x.Doc_Cliente, new { @placeholder = "Documento Cliente" })
+            </div>
+            <div class="field">
+                <input type="submit" class="ui fluid secondary button" value="Guardar" id="SaveClient">
+            </div>
+            <div id="mensaje" style="margin:0 auto; color:red;">
+                @Html.ValidationMessageFor(x => x.nom_Cliente) <br />
+                @Html.ValidationMessageFor(x => x.Doc_Cliente)
+            </div>
+        </div>
+    }
+</div>
+
+<script src="~/Assets/jquery.validate.min.js"></script>
+<script src="~/Assets/jquery.validate.unobtrusive.min.js"></script>

@@ -1,0 +1,49 @@
+﻿@model FacturaSoft.Helper.PagedData<Model.Cliente>
+
+@{
+    ViewBag.Title = "Clientes";
+    List<Model.Pagina> lstPagina = Session["lstPaginas"] as List<Model.Pagina>;
+}
+
+    @section Menu {
+        @foreach (var item in lstPagina)
+        {
+            if (item.Nom_Pagina == "Cliente")
+            {
+                <a class="active item" href="/@item.Nom_Pagina/Index"> @item.Nom_Pagina </a>
+            }
+            else
+            {
+                <a class="item" href="/@item.Nom_Pagina/Index"> @item.Nom_Pagina </a>
+            }
+        }
+    }
+
+    <div class="ui tertiary segment">
+        <h2 class="ui header">
+            <img src=" ~/Images/patrick.png" class="ui circular image" />
+            @Session["Nombre"]
+        </h2>
+    </div>
+
+    <div class="ui clearing secondary inverted red segment">        
+        <h1> Clientes </h1>
+        <div> 
+            <button class="ui inverted black button"> 
+                Nuevo &nbsp;
+                <i class="add user icon"></i> 
+            </button>
+        </div>
+    </div>
+
+    <hr />
+    <br />
+    <div id="registros">
+        @Html.Partial("ClienteList")
+    </div>
+
+
+@*Código para la ventana modal de las acciones agregar, editar y eliminar*@ 
+<div class="ui modal" id="modal2" style="margin:-200px; width:400px;"></div>
+
+

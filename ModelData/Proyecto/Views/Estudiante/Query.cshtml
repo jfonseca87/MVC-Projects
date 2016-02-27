@@ -1,0 +1,27 @@
+﻿@model IEnumerable<Proyecto.Models.SP_Datos_Estudiante>
+
+@{
+    ViewBag.Title = "Query";
+    Layout = "~/Views/_LayoutProject.cshtml";
+}
+
+<br /><br />
+
+<h2>Query</h2>
+
+<table class="table table-hover table-condensed" style="width:600px;" align="center">
+    <tr>
+        <th>Estudiante Nombre</th>
+        <th>Estudiante Edad</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(itemModel => item.EstudianteNombre)</td>
+            <td>@Html.DisplayFor(itemModel => item.EstudianteEdad)</td>
+        </tr>
+    }
+</table>
+
+<br />
+@Html.ActionLink("Retornar", "Index", "Home", null, new { @class="btn btn-danger"})

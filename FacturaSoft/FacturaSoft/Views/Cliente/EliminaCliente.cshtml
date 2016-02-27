@@ -1,0 +1,20 @@
+﻿@model Model.Cliente
+
+@{
+    Layout = null;
+}
+
+
+<link href="~/Assets/semantic.min.css" rel="stylesheet" />
+
+<div class="header">Eliminar Registro</div>
+<div class="content">
+    <h3>Esta seguro(a) de eliminar el cliente <b> @Model.nom_Cliente </b>? </h3>
+</div>
+<div class="actions">
+    <a class="ui blue button" href="/Cliente/EliminarCliente/@Model.Id_Cliente">Borrar</a>
+    <a class="ui cancel button" href="#">Cancelar</a>
+</div>
+
+<script src="~/Assets/jquery.validate.min.js"></script>
+<script src="~/Assets/jquery.validate.unobtrusive.min.js"></script>

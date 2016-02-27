@@ -1,0 +1,25 @@
+﻿@model ICollection<ModelData.GetCoursesByStudentId_Result>
+
+@{
+    ViewBag.Title = "QueryStudent";
+    Layout = "~/Views/_LayoutProject.cshtml";
+}
+
+<br /><br />
+<h2>QueryStudent</h2>
+
+<table class="table table-hover table-condensed" style="width:600px;" align="center">
+    <tr>
+        <td>Course ID</td>
+        <td>Course Name</td>
+        <td>Teacher ID</td>
+    </tr>
+    @foreach(var item in Model)
+    {
+        <tr>
+            <td> @Html.DisplayFor(s => item.courseid)</td>
+            <td> @Html.DisplayFor(s => item.coursename)</td>
+            <td> @Html.DisplayFor(s => item.TeacherId)</td>
+        </tr>
+    }
+</table>

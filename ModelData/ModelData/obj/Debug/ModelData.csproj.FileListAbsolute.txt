@@ -1,0 +1,10 @@
+d:\jlfr\mis documentos ( local )\visual studio 2013\Projects\ModelData\ModelData\bin\Debug\ModelData.dll.config
+d:\jlfr\mis documentos ( local )\visual studio 2013\Projects\ModelData\ModelData\bin\Debug\ModelData.dll
+d:\jlfr\mis documentos ( local )\visual studio 2013\Projects\ModelData\ModelData\bin\Debug\ModelData.pdb
+d:\jlfr\mis documentos ( local )\visual studio 2013\Projects\ModelData\ModelData\bin\Debug\EntityFramework.dll
+d:\jlfr\mis documentos ( local )\visual studio 2013\Projects\ModelData\ModelData\bin\Debug\EntityFramework.SqlServer.dll
+d:\jlfr\mis documentos ( local )\visual studio 2013\Projects\ModelData\ModelData\bin\Debug\EntityFramework.xml
+d:\jlfr\mis documentos ( local )\visual studio 2013\Projects\ModelData\ModelData\bin\Debug\EntityFramework.SqlServer.xml
+d:\jlfr\mis documentos ( local )\visual studio 2013\Projects\ModelData\ModelData\obj\Debug\ModelData.csprojResolveAssemblyReference.cache
+d:\jlfr\mis documentos ( local )\visual studio 2013\Projects\ModelData\ModelData\obj\Debug\ModelData.dll
+d:\jlfr\mis documentos ( local )\visual studio 2013\Projects\ModelData\ModelData\obj\Debug\ModelData.pdb

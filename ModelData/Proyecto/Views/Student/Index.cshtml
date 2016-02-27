@@ -1,0 +1,35 @@
+﻿@model IEnumerable<ModelData.Student>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/_LayoutProject.cshtml";
+}
+
+<h2>Index</h2>
+
+<div> @Html.ActionLink("Create New Student", "Create", "Student", null, new { @class = "btn btn-primary"})</div>
+<br />
+<div>
+    <table class="table table-hover table-condensed" style="width:600px;" align="center">
+        <tr>
+            <th>Student ID</th>
+            <th>Student Name</th>
+            <th>  </th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(itemModel => item.StudentID)
+                </td>
+                <td>
+                    @Html.DisplayFor(itemModel => item.StudentName)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit ", "Edit", new { id = item.StudentID }, new { @class = "glyphicon glyphicon-eye-open" }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.StudentID }, new { @class = "glyphicon glyphicon-remove-circle" })
+                </td>
+            </tr>
+        }
+    </table>
+</div>

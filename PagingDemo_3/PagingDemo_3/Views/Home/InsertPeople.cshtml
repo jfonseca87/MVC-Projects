@@ -1,0 +1,53 @@
+﻿@model PagingDemo_3.Models.Person
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link href="~/Assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Assets/css/bootstrap-theme.min.css" rel="stylesheet" />
+    <style type="text/css">
+        .validacion{
+            color : red;
+        }
+    </style>
+    <meta name="viewport" content="width=device-width" />
+    <title>New Person</title>
+</head>
+<body>
+    
+      <div>
+       
+            @{Html.BeginForm("InsertPeople", "Home", FormMethod.Post);}
+              <div class="form-group">
+                  @Html.Label("Forename")
+                  @Html.TextBoxFor(p => p.Forename, new { @class = "form-control" })
+                  @Html.ValidationMessageFor(p => p.Forename, null, new { @class = "validacion" })
+              </div>
+              <div class="form-group">
+                  @Html.Label("Surename")
+                  @Html.TextBoxFor(p => p.Surname, new { @class = "form-control" })
+                  @Html.ValidationMessageFor(p => p.Surname, null, new { @class = "validacion" })
+              </div>
+              <div class="form-group">
+                  @Html.Label("Location")
+                  @Html.TextBoxFor(p => p.Country, new { @class = "form-control" })
+                  @Html.ValidationMessageFor(p => p.Country, null, new { @class = "validacion" })
+              </div>
+
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  <button type="submit" class="btn btn-primary">Save</button>
+              </div>
+
+              @{Html.EndForm();}
+      </div>
+</body>
+</html>
+
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>

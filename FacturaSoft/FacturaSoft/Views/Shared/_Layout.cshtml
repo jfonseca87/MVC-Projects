@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <link href="~/Assets/semantic.min.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title | FacturaSoft </title>
+</head>
+<body>
+    <div class="ui container">
+        <div class="ui inverted menu">
+            <div class="header item">
+                FacturaSoft &nbsp;
+                <i class="payment icon" ></i>
+            </div>
+            @RenderSection("Menu", false)
+            <div class="right menu">
+                <a class="item">@Session["Operacion"]</a>
+            </div>
+        </div>
+        <div class="row">
+            @RenderBody()
+        </div>
+        <br />
+        <footer>
+            <hr />
+            <div class="row" style="text-align:center">
+                Ejemplo desarrollado por <a href="http://anexsoft.com">JorgeSoft</a> <br />
+                <i class="spy icon"></i>
+            </div>
+        </footer>
+    </div>
+    <script src="~/Assets/jquery.js"></script>
+    <script src="~/Assets/semantic.min.js"></script>
+    <script src="~/Assets/Logic.js"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+d:\jlfr\mis documentos ( local )\visual studio 2013\Projects\FacturaSoft\Model\bin\Debug\Model.dll.config
+d:\jlfr\mis documentos ( local )\visual studio 2013\Projects\FacturaSoft\Model\bin\Debug\Model.dll
+d:\jlfr\mis documentos ( local )\visual studio 2013\Projects\FacturaSoft\Model\bin\Debug\Model.pdb
+d:\jlfr\mis documentos ( local )\visual studio 2013\Projects\FacturaSoft\Model\bin\Debug\EntityFramework.dll
+d:\jlfr\mis documentos ( local )\visual studio 2013\Projects\FacturaSoft\Model\bin\Debug\EntityFramework.SqlServer.dll
+d:\jlfr\mis documentos ( local )\visual studio 2013\Projects\FacturaSoft\Model\bin\Debug\EntityFramework.xml
+d:\jlfr\mis documentos ( local )\visual studio 2013\Projects\FacturaSoft\Model\bin\Debug\EntityFramework.SqlServer.xml
+d:\jlfr\mis documentos ( local )\visual studio 2013\Projects\FacturaSoft\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+d:\jlfr\mis documentos ( local )\visual studio 2013\Projects\FacturaSoft\Model\obj\Debug\Model.dll
+d:\jlfr\mis documentos ( local )\visual studio 2013\Projects\FacturaSoft\Model\obj\Debug\Model.pdb

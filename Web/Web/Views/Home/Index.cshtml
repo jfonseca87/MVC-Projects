@@ -1,0 +1,49 @@
+﻿@model List<Model.Alumno>
+
+@{
+    ViewBag.Title = "Alumnos";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="well well-sm">
+    <div class="row">
+        <div class="col-xs-10">
+            <h2>Alumnos</h2>
+        </div>
+        <div class="col-xs-2 text-right">
+            <a class="btn btn-success" href="~/home/crud">Nuevo registro</a>
+        </div>
+    </div>
+</div>
+
+<table class="table table-striped" style="width:800px" align="center">
+    <thead>
+        <tr>
+            <th style="width:150px">Id Alumno</th>
+            <th style="width:150px">Nombre Alumno</th>
+            <th>Apellido Alumno</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var a in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(al => a.Id_Alumno)</td>
+                <td>@Html.DisplayFor(al => a.Nombre_Alumno)</td>
+                <td>@Html.DisplayFor(al => a.Apellido_Alumno)</td>
+                <td class="text-right">
+                    <a class="btn btn-default btn-primary" href="~/home/details/@a.Id_Alumno" title="Ver Cursos"> 
+                        <i class="glyphicon glyphicon-eye-open"></i>
+                    </a> 
+                    <a class="btn btn-default btn-warning" href="~/home/crud/@a.Id_Alumno" title="Editar">
+                        <i class="glyphicon glyphicon-pencil"></i>
+                    </a> 
+                    <a onclick="return confirm('¿Esta Seguro(a) de eliminar el registro ?')" class="btn btn-default btn-danger" href="~/home/eliminar/@a.Id_Alumno" title="Eliminar">
+                        <i class="glyphicon glyphicon-remove-sign"></i>
+                    </a> 
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

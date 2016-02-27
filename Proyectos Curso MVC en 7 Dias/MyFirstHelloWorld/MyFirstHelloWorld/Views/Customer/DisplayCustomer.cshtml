@@ -1,0 +1,28 @@
+﻿@model MyFirstHelloWorld.Models.Customer
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>DisplayCustomer</title>
+</head>
+<body>
+    <div>
+        El código del cliente es @Model.Code <br />
+        El nombre del cliente es @Model.Name <br />
+        @if (@Model.Amount > 100)
+        {
+            <p> Este cliente es VIP </p>
+        }
+        else
+        {
+            <p> Este cliente es Normal </p>
+        }
+    </div>
+</body>
+</html>

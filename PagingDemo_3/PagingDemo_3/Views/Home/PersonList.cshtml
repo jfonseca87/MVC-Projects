@@ -1,0 +1,97 @@
+﻿@model PagingDemo_3.Helpers.PagedData<PagingDemo_3.Models.Person>
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>
+                Forename
+            </th>
+            <th>
+                Surname
+            </th>
+            <th>
+                Location
+            </th>
+            <th>
+                Actions
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var person in Model.Data)
+        {
+            <tr>
+                <td>
+                    @person.Forename
+                </td>
+                <td>
+                    @person.Surname
+                </td>
+                <td>
+                    @person.Country
+                </td>
+                <td>
+                    <button type="button" alt="Edit Person" title="Edit Person" class="btn btn-warning" data-id="@person.PersonId" data-toggle="modal" data-target="#myModal">
+                        <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+                    </button>
+                    <button type="button" alt="Remove Person" title="Remove Person" class="btn btn-danger" data-id="@person.PersonId" data-toggle="modal" data-target="#DeleteModal">
+                        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                    </button>
+                </td>
+            </tr>
+        }
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="4" align="center">
+                <ul class="pagination">
+                    @for (int i = 1; i <= Model.NumberOfPages; i++)
+                    {
+                        if (i == Model.CurrentPage)
+                        {
+                            <li class="active">
+                                <a class="page-number" href="javascript:void();">@i</a>
+                            </li>
+                        }
+                        else
+                        {
+                            <li>
+                                <a class="page-number" href="javascript:void();">@i</a>
+                            </li>
+                        }
+                    }
+                </ul>
+            </td>
+        </tr>
+    </tfoot>
+</table>
+
+<script src="~/Assets/js/logic.js"></script>
+<script src="~/Assets/js/jquery-1.10.2.min.js"></script>
+@*<script type="text/javascript">
+    $(document).ready(function () {
+        $(".page-number").click(function () {
+            var page = parseInt($(this).html());
+
+            $.ajax({
+                url: '@Url.Action("PersonList")',
+                data: { "id": page },
+                success: function (data) {
+                    $("#person-list").html(data);
+                }
+            });
+
+        });
+    });
+</script>*@
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".page-number").click(function () {
+
+            var page = parseInt($(this).html());
+
+            $("#person-list").load("/home/personlist/" + page);
+        });
+    });
+</script>

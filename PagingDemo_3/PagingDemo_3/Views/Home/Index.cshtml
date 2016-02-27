@@ -1,0 +1,57 @@
+﻿@model PagingDemo_3.Helpers.PagedData<PagingDemo_3.Models.Person>
+
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<link href="~/Assets/css/bootstrap.min.css" rel="stylesheet" />
+
+<div class="container">
+    <h1>People</h1>
+<p>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+        Add Person
+    </button>
+</p>
+</div>
+
+
+<div id="person-list" class="container">
+    @Html.Partial("PersonList")
+</div>
+
+<div class="modal fade bs-example-modal-sm" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel"></h4>
+            </div>
+            <div class="modal-body">
+                ...
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="DeleteModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel"></h4>
+            </div>
+            <div class="modal-body">
+                ...
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<script src="~/Assets/js/jquery-1.10.2.min.js"></script>
+<script src="~/Assets/js/bootstrap.min.js"></script>
+<script src="~/Assets/js/logic.js"></script>

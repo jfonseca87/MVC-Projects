@@ -1,0 +1,10 @@
+D:\jlfr\Mis Documentos ( Local )\Visual Studio 2013\Projects\PruebaSincoSoft\Model\bin\Debug\Model.dll.config
+D:\jlfr\Mis Documentos ( Local )\Visual Studio 2013\Projects\PruebaSincoSoft\Model\bin\Debug\Model.dll
+D:\jlfr\Mis Documentos ( Local )\Visual Studio 2013\Projects\PruebaSincoSoft\Model\bin\Debug\Model.pdb
+D:\jlfr\Mis Documentos ( Local )\Visual Studio 2013\Projects\PruebaSincoSoft\Model\bin\Debug\EntityFramework.dll
+D:\jlfr\Mis Documentos ( Local )\Visual Studio 2013\Projects\PruebaSincoSoft\Model\bin\Debug\EntityFramework.SqlServer.dll
+D:\jlfr\Mis Documentos ( Local )\Visual Studio 2013\Projects\PruebaSincoSoft\Model\bin\Debug\EntityFramework.xml
+D:\jlfr\Mis Documentos ( Local )\Visual Studio 2013\Projects\PruebaSincoSoft\Model\bin\Debug\EntityFramework.SqlServer.xml
+D:\jlfr\Mis Documentos ( Local )\Visual Studio 2013\Projects\PruebaSincoSoft\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+D:\jlfr\Mis Documentos ( Local )\Visual Studio 2013\Projects\PruebaSincoSoft\Model\obj\Debug\Model.dll
+D:\jlfr\Mis Documentos ( Local )\Visual Studio 2013\Projects\PruebaSincoSoft\Model\obj\Debug\Model.pdb

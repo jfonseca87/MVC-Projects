@@ -1,0 +1,78 @@
+﻿@model List<Model.Bill>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        <a href="/Home/Index">Inicio</a>
+        <a href="/Customer/Index">Add Customer</a>
+        <a href="/Product/Index">Add Product</a>
+
+        <hr style="color:red;" />
+        <br /><br />
+        <table align="center">
+            <thead style="background-color:gray;">
+                <tr>
+                    <th colspan="8"> Facturas </th>
+                </tr>
+                <tr>
+                    <th> No Factura </th>
+                    <th> Cliente </th>
+                    <th> Producto </th>
+                    <th> Valor Unitario </th>
+                    <th> Cantidad Producto </th>
+                    <th> SubTotal </th>
+                    <th> IVA </th>
+                    <th> Total </th>
+                </tr>
+            </thead>
+            <tbody>
+             
+                @{int numero = 0;}
+                @foreach ( var factura in Model)
+                {
+                    <tr>
+                        <td> @factura.idFactura </td>
+                        <td> @factura.codCustomer </td>
+                        <td> @factura.codProduct </td>
+                        <td> @factura.valUnit </td>
+                        <td> @factura.cantProduct </td>
+                        <td> @factura.subtotal </td>
+                        <td> @factura.IVA </td>
+                        <td> @factura.total </td>
+                    </tr>
+                    
+                    numero = @factura.idFactura;
+                }
+
+                @{Html.BeginForm("InsertFactura", "Home", FormMethod.Post, new { @id = "frmFactura"});}
+
+                <tr>
+                    <td> @Html.Label(Convert.ToString(numero + 1))</td>
+                    <td> @Html.DropDownList("dpCustomer", "Seleccione...") </td>
+                    <td> @Html.DropDownList("dpProduct", "Seleccione...") </td>
+                    <td> @Html.TextBox("txtValUnit") </td>
+                    <td> @Html.TextBox("txtCantidad") </td>
+                    <td> @Html.TextBox("txtSubtotal") </td>
+                    <td> @Html.TextBox("txtIVA") </td>
+                    <td> @Html.TextBox("txtTotal") </td>
+                    <td><input type="submit" value="Enviar" /></td>
+                </tr>
+
+                @{Html.EndForm();}
+            </tbody>
+        </table>
+    </div>
+    <script src="~/Assets/js/jquery.js"></script>
+    <script src="~/Assets/js/logic.js"></script>
+</body>
+</html>

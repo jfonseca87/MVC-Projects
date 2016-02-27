@@ -1,0 +1,30 @@
+﻿@model Model.Usuario
+
+@{
+    ViewBag.Title = "Ingresar";
+    Layout = null;
+}
+
+<link href="~/Assets/semantic.min.css" rel="stylesheet" />
+
+@using (Html.BeginForm("ConsultaIngreso", "Home", FormMethod.Post, new { @id = "IngForm" }))
+{
+    <div id="ingForm" class="ui form">
+        <div class="field">
+            <label>User</label>
+            @Html.TextBoxFor(x => x.Nick_Usuario, new { @placeholder = "User"})
+        </div>
+        <div class="field">
+            <label>Password</label>
+            @Html.PasswordFor(x => x.UPassword, new { @placeholder = "Password" })
+        </div>
+        <div class="field">
+            <input type="button" class="ui fluid secondary button" value="Entrar" id="Entrar">
+        </div>
+        <div class="ui red label" id="mensaje" style="visibility:hidden; margin:0 auto;">
+            Usuario y/o contraseña incorrectos!
+        </div>
+    </div>
+}
+
+<script src="~/Assets/Logic.js"></script>
