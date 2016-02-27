@@ -1,0 +1,62 @@
+﻿@model PruebaSincoSoft2.Models.Pedido
+
+@{
+    Layout = null;
+    List<PruebaSincoSoft2.Models.Pedido> lstPedido = ViewBag.Listado;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        @Html.ActionLink("Nuevo Usuario", "Index", "Usuario") |
+        @Html.ActionLink("Nuevo Producto", "Index", "Producto")
+    </div>
+
+    <hr />
+
+    <div> 
+        <table>
+            <thead style="background-color:gray;">
+                <tr>
+                    <th>USUARIO</th>
+                    <th>PRODUCTO</th>
+                    <th>VALOR UNITARIO</th>
+                    <th>CANTIDAD</th>
+                    <th>SUBTOTAL</th>
+                    <th>TOTAL</th>
+                </tr>
+            </thead>
+            <tbody>
+                @Html.Partial("PedidoList", lstPedido)
+                @{Html.BeginForm("Guardar", "Home", FormMethod.Post);}
+                <tr>
+                    <td> @Html.DropDownList("dpUsuario", "Seleccione...")</td>
+                    <td> @Html.DropDownList("dpProducto", "Seleccione...")</td>
+                    <td> @Html.HiddenFor(p => p.PedVrUnit)</td>
+                    <td> @Html.TextBoxFor(p => p.PedCant)</td>
+                    <td>
+                        @Html.HiddenFor(p => p.PedIVA) 
+                        @Html.TextBoxFor(p => p.PedSubTot)
+                    </td>
+                    <td> @Html.TextBoxFor(p => p.PedTotal)</td>
+                    <td> <button type="submit" title="Guardar"> Guardar </button></td>
+                </tr>
+                <tr>
+                    <td colspan="3" style="color:red;">
+                        @Html.ValidationSummary()
+                    </td>
+                </tr>
+                @{Html.EndForm();}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
+<script src="~/Assets/js/jquery-1.10.2.min.js"></script>
+<script src="~/Assets/js/logic.js"></script>

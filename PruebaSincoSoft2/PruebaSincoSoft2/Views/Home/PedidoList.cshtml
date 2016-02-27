@@ -1,0 +1,15 @@
+﻿@model IList<PruebaSincoSoft2.Models.Pedido>
+
+
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td> @Html.DisplayFor(p => item.PedUsu) </td>
+                <td> @Html.DisplayFor(p => item.PedProd) </td>
+                <td> @String.Format("{0:c}", item.PedVrUnit)  </td>
+                <td> @Html.DisplayFor(p => item.PedCant) </td>
+                <td> @String.Format("{0:c}", item.PedSubTot)  </td>
+                <td> @String.Format("{0:c}", item.PedTotal)  </td>
+            </tr>
+        }
