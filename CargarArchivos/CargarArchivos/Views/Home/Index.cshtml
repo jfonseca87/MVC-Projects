@@ -1,0 +1,25 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        <form action="@Url.Action("Upload")" enctype="multipart/form-data" method="post">
+            <label for="descripcion"> Descripción del fichero </label>
+            <input type="text" id="descripcion" name="descripcion" />
+            <br />
+            <label for="fichero">Fichero:</label>
+            <input type="file" name="fichero" size="40">
+            <br />
+            <input type="submit" value="Enviar" />
+        </form>
+    </div>
+</body>
+</html>

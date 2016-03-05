@@ -1,0 +1,51 @@
+﻿@model IList<ConvertirAJSON.Models.Persona>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th> ID </th>
+                    <th> Nombres </th>
+                    <th> Apellidos </th>
+                    <th> Edad </th>
+                    <th> Mail </th>
+                    <th> Dirección </th>
+                    <th> Teléfono </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.ID</td>
+                        <td>@item.Nombres</td>
+                        <td>@item.Apellidos</td>
+                        <td>@item.Edad</td>
+                        <td>@item.Mail</td>
+                        <td>@item.Direccion</td>
+                        <td>@item.Telefono</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <br />
+        <div>
+            <button type="submit" id="exportar"> Exportar a Archivo JSON </button> 
+        </div>
+    </div>
+</body>
+</html>
+<script src="~/Assets/js/jquery-1.10.2.min.js"></script>
+<script src="~/Assets/js/logic.js"></script>
