@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title> @ViewBag.Title | PruebaSistran </title>
+    <link href="~/Assets/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <h1> Prueba Sistran </h1> 
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                @RenderBody()
+            </div>
+        </div>
+        <footer>
+            <div class="text-center">
+                <hr />
+                <div class="well well-sm">
+                    Ejemplo desarrollado por <a href="https://www.github.com/jfonseca87"> JorgeSoft </a> 
+                    <i class="glyphicon glyphicon-tower"></i>
+                </div> 
+            </div>
+        </footer>
+    </div>
+    <div class="modal fade" id="Modal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                Cargando...
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script src="~/Assets/js/jquery.js"></script>
+<script src="~/Assets/js/bootstrap.min.js"></script>
+<script src="~/Assets/js/Logic.js"></script>

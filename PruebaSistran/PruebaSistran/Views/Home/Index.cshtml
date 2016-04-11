@@ -1,0 +1,84 @@
+﻿@model List<Model.ClienteView>
+
+@{
+    ViewBag.Title = "Clientes";
+}
+
+<a class="btn btn-success" data-toggle="modal" data-target="#Modal1" id="nuevoCliente">Nuevo Cliente</a>
+  
+
+<table class="table table-striped table-hover" style="width:900px" align="center">
+    <thead>
+        <tr>
+            <th> Cliente ID </th>
+            <th> Cedula </th>
+            <th> Nombres </th>
+            <th> Apellidos </th>
+            <th> Sede </th>
+            <th> Fecha Registro </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td> @Html.DisplayFor(c => item.idCliente) </td>
+                <td> @Html.DisplayFor(c => item.VCedula) </td>
+                <td> @Html.DisplayFor(c => item.VNombres) </td>
+                <td> @Html.DisplayFor(c => item.VApellidos) </td>
+                <td> @Html.DisplayFor(c => item.VSede) </td>
+                <td> @Html.DisplayFor(c => item.FechaRegistro) </td>
+                <td>
+                    <a class="btn btn-default btn-warning" data-id="@item.idCliente" data-toggle="modal" data-target="#Modal1" title="Editar">
+                        <i class="glyphicon glyphicon-pencil"></i>
+                    </a>
+                    <a class="btn btn-default btn-danger" data-id="@item.idCliente" data-toggle="modal" data-target="#Modal1" title="Eliminar">
+                        <i class="glyphicon glyphicon-remove-sign"></i>
+                    </a>  
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<br />
+<div class="col-xs-12">
+    <a class="btn btn-success" id="consulta1"> Consulta Cliente - Ciudad </a>
+    <br /><br />
+    <div class="row" style="display:none;" id="tabla1">
+        <div class="col-xs-12">
+            <table class='table table-striped table-hover' style='width:800px' align='center'>
+                <thead>
+                    <tr>
+                        <th> DNI </th>
+                        <th> Nombres </th>
+                        <th> Sede </th>
+                        <th> Ciudad </th>
+                    </tr>
+                </thead>
+                <tbody id="cuerpo1"></tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<br />
+<br />
+<div class="col-xs-12">
+    <a class="btn btn-success" id="consulta2"> Consulta TOP 5 Clientes </a>
+    <br /><br />
+    <div class="row" style="display:none;" id="tabla2">
+        <div class="col-xs-12">
+            <table class='table table-striped table-hover' style='width:800px' align='center'>
+                <thead>
+                    <tr>
+                        <th> DNI </th>
+                        <th> Nombres </th>
+                        <th> Valor </th>
+                        <th> Sede </th>
+                        <th> Ciudad </th>
+                    </tr>
+                </thead>
+                <tbody id="cuerpo2"></tbody>
+            </table>
+        </div>
+    </div>
+</div>

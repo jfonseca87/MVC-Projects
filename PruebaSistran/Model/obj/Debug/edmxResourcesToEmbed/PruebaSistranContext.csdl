@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PruebasVariasModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Ciudad">
+    <Key>
+      <PropertyRef Name="IdCiudad" />
+    </Key>
+    <Property Name="IdCiudad" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Sede" Relationship="Self.FK__Sede__IdCiudad__1273C1CD" FromRole="Ciudad" ToRole="Sede" />
+  </EntityType>
+  <EntityType Name="Cliente">
+    <Key>
+      <PropertyRef Name="IdCliente" />
+    </Key>
+    <Property Name="IdCliente" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Cedula" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Nombres" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Apellidos" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IdSede" Type="Int32" />
+    <Property Name="FechaRegistro" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Sede" Relationship="Self.FK__Cliente__IdSede__15502E78" FromRole="Cliente" ToRole="Sede" />
+    <NavigationProperty Name="Facturacion" Relationship="Self.FK__Facturaci__IdCli__182C9B23" FromRole="Cliente" ToRole="Facturacion" />
+  </EntityType>
+  <EntityType Name="Facturacion">
+    <Key>
+      <PropertyRef Name="IdFactura" />
+    </Key>
+    <Property Name="IdFactura" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Observaciones" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Item" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Valor" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="IdCliente" Type="Int32" />
+    <Property Name="FechaRegistro" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Cliente" Relationship="Self.FK__Facturaci__IdCli__182C9B23" FromRole="Facturacion" ToRole="Cliente" />
+  </EntityType>
+  <EntityType Name="Sede">
+    <Key>
+      <PropertyRef Name="IdSede" />
+    </Key>
+    <Property Name="IdSede" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IdCiudad" Type="Int32" />
+    <NavigationProperty Name="Ciudad" Relationship="Self.FK__Sede__IdCiudad__1273C1CD" FromRole="Sede" ToRole="Ciudad" />
+    <NavigationProperty Name="Cliente" Relationship="Self.FK__Cliente__IdSede__15502E78" FromRole="Sede" ToRole="Cliente" />
+  </EntityType>
+  <Association Name="FK__Sede__IdCiudad__1273C1CD">
+    <End Role="Ciudad" Type="Self.Ciudad" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Sede" Type="Self.Sede" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ciudad">
+        <PropertyRef Name="IdCiudad" />
+      </Principal>
+      <Dependent Role="Sede">
+        <PropertyRef Name="IdCiudad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Cliente__IdSede__15502E78">
+    <End Role="Sede" Type="Self.Sede" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Cliente" Type="Self.Cliente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sede">
+        <PropertyRef Name="IdSede" />
+      </Principal>
+      <Dependent Role="Cliente">
+        <PropertyRef Name="IdSede" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Facturaci__IdCli__182C9B23">
+    <End Role="Cliente" Type="Self.Cliente" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Facturacion" Type="Self.Facturacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cliente">
+        <PropertyRef Name="IdCliente" />
+      </Principal>
+      <Dependent Role="Facturacion">
+        <PropertyRef Name="IdCliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="PruebasVariasEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Ciudad" EntityType="Self.Ciudad" />
+    <EntitySet Name="Cliente" EntityType="Self.Cliente" />
+    <EntitySet Name="Facturacion" EntityType="Self.Facturacion" />
+    <EntitySet Name="Sede" EntityType="Self.Sede" />
+    <AssociationSet Name="FK__Sede__IdCiudad__1273C1CD" Association="Self.FK__Sede__IdCiudad__1273C1CD">
+      <End Role="Ciudad" EntitySet="Ciudad" />
+      <End Role="Sede" EntitySet="Sede" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Cliente__IdSede__15502E78" Association="Self.FK__Cliente__IdSede__15502E78">
+      <End Role="Sede" EntitySet="Sede" />
+      <End Role="Cliente" EntitySet="Cliente" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Facturaci__IdCli__182C9B23" Association="Self.FK__Facturaci__IdCli__182C9B23">
+      <End Role="Cliente" EntitySet="Cliente" />
+      <End Role="Facturacion" EntitySet="Facturacion" />
+    </AssociationSet>
+    <FunctionImport Name="TOP5ClientesValor" ReturnType="Collection(PruebasVariasModel.TOP5ClientesValor_Result)" />
+  </EntityContainer>
+  <ComplexType Name="TOP5ClientesValor_Result">
+    <Property Type="String" Name="Cedula" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Nombres" Nullable="false" MaxLength="101" />
+    <Property Type="Decimal" Name="Valor" Nullable="false" Precision="19" />
+    <Property Type="String" Name="Sede" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Ciudad" Nullable="false" MaxLength="50" />
+  </ComplexType>
+</Schema>

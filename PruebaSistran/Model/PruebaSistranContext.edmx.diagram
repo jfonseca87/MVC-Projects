@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="3326d71785434fa0a1f7d17a21068128" Name="Diagram1">
+        <EntityTypeShape EntityType="PruebasVariasModel.Ciudad" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PruebasVariasModel.Cliente" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="PruebasVariasModel.Facturacion" Width="1.5" PointX="7.5" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="PruebasVariasModel.Sede" Width="1.5" PointX="3" PointY="1.25" IsExpanded="true" />
+        <AssociationConnector Association="PruebasVariasModel.FK__Sede__IdCiudad__1273C1CD" ManuallyRouted="false" />
+        <AssociationConnector Association="PruebasVariasModel.FK__Cliente__IdSede__15502E78" ManuallyRouted="false" />
+        <AssociationConnector Association="PruebasVariasModel.FK__Facturaci__IdCli__182C9B23" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
